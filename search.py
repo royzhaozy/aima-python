@@ -40,7 +40,7 @@ class Problem(object):
     __init__, goal_test, and path_cost. Then you will create instances
     of your subclass and solve them with the various search functions."""
 
-    def __init__(self, initial: object, goal: object = None) -> object:
+    def __init__(self, initial, goal = None):
         """The constructor specifies the initial state, and possibly a goal
         state, if there is a unique goal. Your subclass's constructor can add
         other arguments."""
@@ -280,7 +280,7 @@ def best_first_graph_search(problem, f):
         node = frontier.pop()
         if problem.goal_test(node.state):
             return node
-        explored.add(tuple(i) for i in node.state)
+        explored.add(node.state)
         for child in node.expand(problem):
             if child.state not in explored and child not in frontier:
                 frontier.append(child)
@@ -423,7 +423,7 @@ def astar_Manhattan_search(problem, h=None):
     """A* search is best-first graph search with f(n) = g(n)+h(n).
     You need to specify the h function when you call astar_search, or
     else in your Problem subclass."""
-    h = memoize(problem.h_Manhattan, 'h')
+    h = memoize(h or problem.h_Manhattan, 'h')
     return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
 
 # ______________________________________________________________________________
@@ -501,11 +501,11 @@ class EightPuzzle(Problem):
 
         return sum(s != g for (s, g) in zip(node.state, self.goal))
 
-    def h_Manhattan(problem, node):
+    def h_Manhattan(self, node):
         """ Return the heuristic value for a given state. This heuristic function used is
         h(n) = sum of Manhattan distance """
 
-        return sum(Manhattan_8pz[problem.initial[i]][i] for i in node.state)
+        return sum(Manhattan_8pz[node.state[i]][i] for i in node.state)
 
 # ______________________________________________________________________________
 

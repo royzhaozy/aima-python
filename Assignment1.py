@@ -31,7 +31,7 @@ def make_rand_8puzzle():
     state that is solvable """
     tiles = list(range(0,9))
     random.shuffle(tiles)
-    puzzle = EightPuzzle(tiles)
+    puzzle = EightPuzzle(tuple(tiles))
     if(not puzzle.check_solvability(tiles)):
         puzzle = make_rand_8puzzle()
     return puzzle
@@ -58,19 +58,19 @@ class Question1(unittest.TestCase):
 
 
 def Question2():
-    for i in range (0,1):
-        game = make_rand_8puzzle()
+    for i in range (0,5):
+        game = EightPuzzle(tuple([1,8,3,4,2,7,0,5,6]))#make_rand_8puzzle()
         display(game.initial)
         if (not game.check_solvability(game.initial)):
             print("Puzzle Unsolvable")
             exit()
-        start = time.process_time()
-        astar_search(game)
-        default_time = time.process_time() - start
-        start = time.process_time()
-        astar_Manhattan_search(game,game.h)
-        Manhattan_time = time.process_time() - start
-        print("Problem solved with default heuristic in " + str(default_time) + " seconds\n")
+        start = time.time()
+        astar_search(game, game.h)
+        default_time = time.time() - start
+        print("Problem solved with default heuristic in " + str(default_time) + " seconds")
+        start = time.time()
+        astar_Manhattan_search(game)
+        Manhattan_time = time.time() - start
         print("Problem solved with Manhattan heuristic in " + str(Manhattan_time) + " seconds\n")
 
 if __name__ == '__main__':
