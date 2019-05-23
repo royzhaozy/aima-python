@@ -30,6 +30,17 @@ Manhattan_8pz = numpy.array([[4,3,2,3,2,1,2,1,0],
                              [2,3,4,1,2,3,0,1,2],
                              [3,2,3,2,1,2,1,0,1]])
 
+Manhattan_Ypz = numpy.array([[4,4,3,2,3,2,1,2,0],
+                             [0,4,1,2,3,2,3,4,4],
+                             [4,0,3,2,1,4,3,2,4],
+                             [1,3,0,1,2,1,2,3,3],
+                             [2,2,1,0,1,2,1,2,2],
+                             [3,1,2,1,0,3,2,1,3],
+                             [2,4,1,2,3,0,1,2,2],
+                             [3,3,2,1,2,1,0,1,1],
+                             [4,2,3,2,1,2,1,0,2]])
+
+
 # ______________________________________________________________________________
 
 
@@ -507,6 +518,93 @@ class EightPuzzle(Problem):
         """ Return the heuristic value for a given state. This heuristic function used is
         h(n) = sum of Manhattan distance """
         return sum(Manhattan_8pz[node.state[i]][i] for i in node.state)
+
+# ______________________________________________________________________________
+
+class YPuzzle(Problem):
+
+    """ The problem of sliding tiles numbered from 1 to 8 on a 3x3 board,
+    where one of the squares is a blank. A state is represented as a tuple of length 9,
+    where element at index i represents the tile number  at index i (0 if it's an empty square) """
+ 
+    def __init__(self, initial, goal=(1, 2, 3, 4, 5, 6, 7, 8, 0)):
+        """ Define goal state and initialize a problem """
+
+        self.goal = goal
+        Problem.__init__(self, initial, goal)
+    
+    def find_blank_square(self, state):
+        """Return the index of the blank square in a given state"""
+
+        return state.index(0)
+    
+    def actions(self, state):
+        """ Return the actions that can be executed in the given state.
+        The result would be a list, since there are only four possible actions
+        in any given state of the environment """
+        
+        possible_actions = ['UP', 'DOWN', 'LEFT', 'RIGHT']       
+        index_blank_square = self.find_blank_square(state)
+
+        if index_blank_square in [0,1,2,5,8]:
+            possible_actions.remove('LEFT')
+        if index_blank_square in [0,1,3]:
+            possible_actions.remove('UP')
+        if index_blank_square in [0,1,4,7,8]:
+            possible_actions.remove('RIGHT')
+        if index_blank_square in [5,7,8]:
+            possible_actions.remove('DOWN')
+
+        return possible_actions
+
+    def result(self, state, action):
+        """ Given state and action, return a new state that is the result of the action.
+        Action is assumed to be a valid action in the state """
+
+        # blank is the index of the blank square
+        blank = self.find_blank_square(state)
+        new_state = list(state)
+        
+        if blank % 2 = 0 and blank != 4:
+            delta = {'UP':-2, 'DOWN':2, 'LEFT':-1, 'RIGHT':1}
+        else:
+            delta = {'UP':-3, 'DOWN':3, 'LEFT':-1, 'RIGHT':1}
+        neighbor = blank + delta[action]
+        new_state[blank], new_state[neighbor] = new_state[neighbor], new_state[blank]
+
+        return tuple(new_state)
+
+    def goal_test(self, state):
+        """ Given a state, return True if state is a goal state or False, otherwise """
+
+        return state == self.goal
+
+    def check_solvability(self, state):
+        """ Checks if the given state is solvable """
+
+        if state[0] not in [0,1] or \
+           state[1] not in [0,2] or \
+           state[8] not in [0,7]:
+            return false
+
+        inversion = 0
+        for i in range(2,len(state) - 1):
+            for j in range(i+1, len(state) - 1):
+                if (state[i] > state[j]) and state[i] != 0 and state[j]!= 0:
+                    inversion += 1
+        
+        return inversion % 2 == 0
+    
+    def h(self, node):
+        """ Return the heuristic value for a given state. Default heuristic function used is 
+        h(n) = number of misplaced tiles """
+
+        return sum(s != g for (s, g) in zip(node.state, self.goal))
+
+    def h_manhattan(self, node):
+        """ Return the heuristic value for a given state. This heuristic function used is
+        h(n) = sum of Manhattan distance """
+        return sum(Manhattan_Ypz[node.state[i]][i] for i in node.state)
 
 # ______________________________________________________________________________
 
