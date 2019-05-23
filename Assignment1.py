@@ -8,7 +8,7 @@ import time
 import random
 import numpy
 import unittest
-from search import Node, EightPuzzle, astar_search, astar_Manhattan_search
+from search import Node, EightPuzzle, astar_search, astar_manhattan_search
 
 # Manhattan_8pz = numpy.array([[4,3,2,3,2,1,2,1,0],
 #                              [0,1,2,1,2,3,2,3,4],
@@ -58,20 +58,27 @@ class Question1(unittest.TestCase):
 
 
 def Question2():
-    for i in range (0,5):
-        game = EightPuzzle(tuple([1,8,3,4,2,7,0,5,6]))#make_rand_8puzzle()
+    for i in range (0,10):
+        game = EightPuzzle(tuple([2,0,5,1,6,7,4,8,3]))#make_rand_8puzzle()
         display(game.initial)
         if (not game.check_solvability(game.initial)):
             print("Puzzle Unsolvable")
             exit()
         start = time.time()
-        astar_search(game, game.h)
+        default_search, default_node_removed = astar_search(game)
+        default_solution = default_search.solution()
         default_time = time.time() - start
         print("Problem solved with default heuristic in " + str(default_time) + " seconds")
+        print("Problem solved with default heuristic in " + str(len(default_solution)) + " steps")
+        print("Problem solved with default heuristic with " + str(len(default_node_removed)) + " nodes removed")
+        
         start = time.time()
-        astar_Manhattan_search(game)
-        Manhattan_time = time.time() - start
-        print("Problem solved with Manhattan heuristic in " + str(Manhattan_time) + " seconds\n")
+        manhattan_search, manhattan_node_removed = astar_manhattan_search(game)
+        manhattan_solution = manhattan_search.solution()
+        manhattan_time = time.time() - start
+        print("Problem solved with Manhattan heuristic in " + str(manhattan_time) + " seconds\n")
+        print("Problem solved with Manhattan heuristic in " + str(len(manhattan_solution)) + " steps")
+        print("Problem solved with Manhattan heuristic with " + str(len(manhattan_node_removed)) + " nodes removed")
 
 if __name__ == '__main__':
     #unittest.main()

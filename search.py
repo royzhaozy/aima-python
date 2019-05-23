@@ -20,15 +20,15 @@ from operator import itemgetter
 
 
 infinity = float('inf')
-Manhattan_8pz = numpy.array([[0,1,2,1,2,3,2,3,4],
+Manhattan_8pz = numpy.array([[4,3,2,3,2,1,2,1,0],
+                             [0,1,2,1,2,3,2,3,4],
                              [1,0,1,2,1,2,3,2,3],
                              [2,1,0,3,2,1,4,3,2],
                              [1,2,3,0,1,2,1,2,3],
                              [2,1,2,1,0,1,2,1,2],
                              [3,2,1,2,1,0,3,2,1],
                              [2,3,4,1,2,3,0,1,2],
-                             [3,2,3,2,1,2,1,0,1],
-                             [4,3,2,3,2,1,2,1,0]])
+                             [3,2,3,2,1,2,1,0,1]])
 
 # ______________________________________________________________________________
 
@@ -273,13 +273,15 @@ def best_first_graph_search(problem, f):
     a best first search you can examine the f values of the path returned."""
     f = memoize(f, 'f')
     node = Node(problem.initial)
+    poped_node = 0
     frontier = PriorityQueue('min', f)
     frontier.append(node)
     explored = set()
     while frontier:
         node = frontier.pop()
+        poped_node += 1
         if problem.goal_test(node.state):
-            return node
+            return node, poped_node
         explored.add(node.state)
         for child in node.expand(problem):
             if child.state not in explored and child not in frontier:
@@ -419,11 +421,11 @@ def astar_search(problem, h=None):
     return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
 
 
-def astar_Manhattan_search(problem, h=None):
+def astar_manhattan_search(problem, h=None):
     """A* search is best-first graph search with f(n) = g(n)+h(n).
     You need to specify the h function when you call astar_search, or
     else in your Problem subclass."""
-    h = memoize(h or problem.h_Manhattan, 'h')
+    h = memoize(problem.h_manhattan, 'h')
     return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
 
 # ______________________________________________________________________________
@@ -501,10 +503,9 @@ class EightPuzzle(Problem):
 
         return sum(s != g for (s, g) in zip(node.state, self.goal))
 
-    def h_Manhattan(self, node):
+    def h_manhattan(self, node):
         """ Return the heuristic value for a given state. This heuristic function used is
         h(n) = sum of Manhattan distance """
-
         return sum(Manhattan_8pz[node.state[i]][i] for i in node.state)
 
 # ______________________________________________________________________________
