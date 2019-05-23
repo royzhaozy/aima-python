@@ -517,13 +517,25 @@ class EightPuzzle(Problem):
     def h_manhattan(self, node):
         """ Return the heuristic value for a given state. This heuristic function used is
         h(n) = sum of Manhattan distance """
+
+        # First index finds the right colon, second index finds the distance from goal
         return sum(Manhattan_8pz[node.state[i]][i] for i in node.state)
+
+    def display(self, state):
+        """ Prints a neat and readable representation of state """
+        for i in range(0, 3):
+            for j in range(0, 3):
+                if (state[(3 * i) + j] == 0):
+                    print("* ", end=" ")
+                else:
+                    print(str(state[(3 * i) + j]) + " ", end=" ")
+            print("")
 
 # ______________________________________________________________________________
 
 class YPuzzle(Problem):
 
-    """ The problem of sliding tiles numbered from 1 to 8 on a 3x3 board,
+    """ The problem of sliding tiles numbered from 1 to 8 on a Y shaped board,
     where one of the squares is a blank. A state is represented as a tuple of length 9,
     where element at index i represents the tile number  at index i (0 if it's an empty square) """
  
@@ -564,11 +576,14 @@ class YPuzzle(Problem):
         # blank is the index of the blank square
         blank = self.find_blank_square(state)
         new_state = list(state)
+
         
-        if blank % 2 = 0 and blank != 4:
-            delta = {'UP':-2, 'DOWN':2, 'LEFT':-1, 'RIGHT':1}
+        if blank in [0,6]:
+            delta = {'UP': -3, 'DOWN': 2, 'LEFT': -1, 'RIGHT': 1}
+        elif blank in [2,8]:
+            delta = {'UP': -2, 'DOWN': 3, 'LEFT': -1, 'RIGHT': 1}
         else:
-            delta = {'UP':-3, 'DOWN':3, 'LEFT':-1, 'RIGHT':1}
+            delta = {'UP': -3, 'DOWN': 3, 'LEFT': -1, 'RIGHT': 1}
         neighbor = blank + delta[action]
         new_state[blank], new_state[neighbor] = new_state[neighbor], new_state[blank]
 
@@ -582,10 +597,17 @@ class YPuzzle(Problem):
     def check_solvability(self, state):
         """ Checks if the given state is solvable """
 
+        # The corners has to be 1,2,7 or * (0)
         if state[0] not in [0,1] or \
            state[1] not in [0,2] or \
            state[8] not in [0,7]:
-            return false
+            return False
+
+        # If the corner is empty, the one below/above it has to be the corresponding tile
+        if (state[0] == 0 and state[2] != 1) or \
+           (state[1] == 0 and state[4] != 2) or \
+           (state[8] == 0 and state[6] != 7):
+            return False
 
         inversion = 0
         for i in range(2,len(state) - 1):
@@ -604,7 +626,22 @@ class YPuzzle(Problem):
     def h_manhattan(self, node):
         """ Return the heuristic value for a given state. This heuristic function used is
         h(n) = sum of Manhattan distance """
+
+        # First index finds the right colon, second index finds the distance from goal
         return sum(Manhattan_Ypz[node.state[i]][i] for i in node.state)
+
+    def display(self, state):
+        """ Prints a neat and readable representation of state """
+        for i in range(len(state)):
+            if i == 2 or i == 5 or i == 8:
+                print("")
+            if i == 1 or i == 8:
+                print("  ", end=" ")
+            if state[i] == 0:
+                print("* ", end=" ")
+            else:
+                print(str(state[i]) + " ", end=" ")
+        print("")
 
 # ______________________________________________________________________________
 

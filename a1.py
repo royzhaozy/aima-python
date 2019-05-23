@@ -8,23 +8,7 @@ import time
 import random
 import numpy
 import unittest
-from search import Node, EightPuzzle, astar_search, astar_manhattan_search
-
-# Manhattan_8pz = numpy.array([[4,3,2,3,2,1,2,1,0],
-#                              [0,1,2,1,2,3,2,3,4],
-#                              [1,0,1,2,1,2,3,2,3],
-#                              [2,1,0,3,2,1,4,3,2],
-#                              [1,2,3,0,1,2,1,2,3],
-#                              [2,1,2,1,0,1,2,1,2],
-#                              [3,2,1,2,1,0,3,2,1],
-#                              [2,3,4,1,2,3,0,1,2],
-#                              [3,2,3,2,1,2,1,0,1]])
-#
-# def h_Manhattan(problem, node):
-#     """A* search is best-first graph search with f(n) = g(n)+h(n).
-#     You need to specify the h function when you call astar_search, or
-#     else in your Problem subclass."""
-#     return sum(Manhattan_8pz[problem.initial[i]][i] for i in node.state)
+from search import EightPuzzle, YPuzzle, astar_search, astar_manhattan_search
 
 def make_rand_8puzzle():
     """ Returns a new instance of an EightPuzzle problem with a random initial
@@ -32,21 +16,22 @@ def make_rand_8puzzle():
     tiles = list(range(0,9))
     random.shuffle(tiles)
     puzzle = EightPuzzle(tuple(tiles))
-    if(not puzzle.check_solvability(tiles)):
-        puzzle = make_rand_8puzzle()
+    while (not puzzle.check_solvability(puzzle.initial)):
+        random.shuffle(tiles)
+        puzzle = EightPuzzle(tuple(tiles))
     return puzzle
 
 
-
-def display(state):
-    """ Prints a neat and readable representation of state """
-    for i in range(0, 3):
-        for j in range(0, 3):
-            if (state[(3 * i) + j] == 0):
-                print("* ", end=" ")
-            else:
-                print(str(state[(3 * i) + j]) + " ", end=" ")
-        print("")
+def make_rand_Ypuzzle():
+    """ Returns a new instance of an EightPuzzle problem with a random initial
+    state that is solvable """
+    tiles = list(range(0,9))
+    random.shuffle(tiles)
+    puzzle = YPuzzle(tuple(tiles))
+    while (not puzzle.check_solvability(puzzle.initial)):
+        random.shuffle(tiles)
+        puzzle = YPuzzle(tuple(tiles))
+    return puzzle
 
 class Question1(unittest.TestCase):
     def test_check_solvability(self):
@@ -59,12 +44,9 @@ class Question1(unittest.TestCase):
 
 def Question2():
     for i in range (0,10):
-        print("=============================== Puzzle " + str(i + 1) +" ================================")
-        game = make_rand_8puzzle() #EightPuzzle(tuple([2,0,5,1,6,7,4,8,3]))
-        display(game.initial)
-        if (not game.check_solvability(game.initial)):
-            print("Puzzle Unsolvable")
-            exit()
+        print("============================== 8 Puzzle " + str(i + 1) +" ===============================")
+        game = make_rand_8puzzle()
+        game.display(game.initial)
         start_time = time.time()
         default_search, default_node_removed = astar_search(game)
         elapsed_time = time.time() - start_time
@@ -83,7 +65,31 @@ def Question2():
         print("Problem solved with Manhattan heuristic in " + str(manhattan_solution_len) + " steps")
         print("Problem solved with Manhattan heuristic with " + str(manhattan_node_removed) + " nodes removed\n\n")
 
-if __name__ == '__main__':
-    #unittest.main()
-    Question2()
 
+def Question3():
+    for i in range(0,10):
+        print("============================== Y Puzzle #" + str(i + 1) +" ==============================")
+        game = make_rand_Ypuzzle()
+        game.display(game.initial)
+        start_time = time.time()
+        default_search, default_node_removed = astar_search(game)
+        elapsed_time = time.time() - start_time
+        default_solution_len = len(default_search.solution())
+        print("\n=========================== Default Heuristic ===========================")
+        print("Problem solved with default heuristic in " + str(elapsed_time) + " seconds")
+        print("Problem solved with default heuristic in " + str(default_solution_len) + " steps")
+        print("Problem solved with default heuristic with " + str(default_node_removed) + " nodes removed")
+
+        start_time = time.time()
+        manhattan_search, manhattan_node_removed = astar_manhattan_search(game)
+        elapsed_time = time.time() - start_time
+        manhattan_solution_len = len(manhattan_search.solution())
+        print("\n========================== Manhattan Heuristic ==========================")
+        print("Problem solved with Manhattan heuristic in " + str(elapsed_time) + " seconds")
+        print("Problem solved with Manhattan heuristic in " + str(manhattan_solution_len) + " steps")
+        print("Problem solved with Manhattan heuristic with " + str(manhattan_node_removed) + " nodes removed\n\n")
+
+if __name__ == '__main__':
+    # unittest.main()
+    Question2()
+    Question3()
