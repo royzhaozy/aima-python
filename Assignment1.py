@@ -6,8 +6,25 @@ Ziyi Zhao, 301244109
 
 import time
 import random
+import numpy
 import unittest
-from search import EightPuzzle, astar_search
+from search import Node, EightPuzzle, astar_search, astar_Manhattan_search
+
+# Manhattan_8pz = numpy.array([[4,3,2,3,2,1,2,1,0],
+#                              [0,1,2,1,2,3,2,3,4],
+#                              [1,0,1,2,1,2,3,2,3],
+#                              [2,1,0,3,2,1,4,3,2],
+#                              [1,2,3,0,1,2,1,2,3],
+#                              [2,1,2,1,0,1,2,1,2],
+#                              [3,2,1,2,1,0,3,2,1],
+#                              [2,3,4,1,2,3,0,1,2],
+#                              [3,2,3,2,1,2,1,0,1]])
+#
+# def h_Manhattan(problem, node):
+#     """A* search is best-first graph search with f(n) = g(n)+h(n).
+#     You need to specify the h function when you call astar_search, or
+#     else in your Problem subclass."""
+#     return sum(Manhattan_8pz[problem.initial[i]][i] for i in node.state)
 
 def make_rand_8puzzle():
     """ Returns a new instance of an EightPuzzle problem with a random initial
@@ -49,8 +66,12 @@ def Question2():
             exit()
         start = time.process_time()
         astar_search(game)
-        finish = time.process_time()
-        print("Problem solved with A* in " + str(finish - start) + " seconds\n")
+        default_time = time.process_time() - start
+        start = time.process_time()
+        astar_Manhattan_search(game,game.h)
+        Manhattan_time = time.process_time() - start
+        print("Problem solved with default heuristic in " + str(default_time) + " seconds\n")
+        print("Problem solved with Manhattan heuristic in " + str(Manhattan_time) + " seconds\n")
 
 if __name__ == '__main__':
     #unittest.main()

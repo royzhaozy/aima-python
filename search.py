@@ -12,6 +12,7 @@ from utils import (
 
 from collections import defaultdict, deque
 import math
+import numpy
 import random
 import sys
 import bisect
@@ -19,6 +20,15 @@ from operator import itemgetter
 
 
 infinity = float('inf')
+Manhattan_8pz = numpy.array([[0,1,2,1,2,3,2,3,4],
+                             [1,0,1,2,1,2,3,2,3],
+                             [2,1,0,3,2,1,4,3,2],
+                             [1,2,3,0,1,2,1,2,3],
+                             [2,1,2,1,0,1,2,1,2],
+                             [3,2,1,2,1,0,3,2,1],
+                             [2,3,4,1,2,3,0,1,2],
+                             [3,2,3,2,1,2,1,0,1],
+                             [4,3,2,3,2,1,2,1,0]])
 
 # ______________________________________________________________________________
 
@@ -408,6 +418,14 @@ def astar_search(problem, h=None):
     h = memoize(h or problem.h, 'h')
     return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
 
+
+def astar_Manhattan_search(problem, h=None):
+    """A* search is best-first graph search with f(n) = g(n)+h(n).
+    You need to specify the h function when you call astar_search, or
+    else in your Problem subclass."""
+    h = memoize(problem.h_Manhattan, 'h')
+    return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
+
 # ______________________________________________________________________________
 # A* heuristics 
 
@@ -482,6 +500,12 @@ class EightPuzzle(Problem):
         h(n) = number of misplaced tiles """
 
         return sum(s != g for (s, g) in zip(node.state, self.goal))
+
+    def h_Manhattan(problem, node):
+        """ Return the heuristic value for a given state. This heuristic function used is
+        h(n) = sum of Manhattan distance """
+
+        return sum(Manhattan_8pz[problem.initial[i]][i] for i in node.state)
 
 # ______________________________________________________________________________
 
