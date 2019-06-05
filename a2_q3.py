@@ -3,5 +3,44 @@ Assignment 2 Question 3 for CMPT 310
 Summer 2019, Simon Fraser University
 Ziyi Zhao, 301244109
 """
-from csp import CSP
 
+from utils import count, first
+import search
+import time
+
+from a2_q1 import *
+from a2_q2 import *
+from csp import CSP, different_values_constraint, backtracking_search
+
+# ______________________________________________________________________________
+# Erdos-Renyi random graph problem
+
+def rand_graph_teaming(graph):
+    return CSP(list(graph.keys()),
+                   {i: list(graph.keys()) for i in range(0, graph.__len__())},
+                   graph,
+                   different_values_constraint)
+
+def team_count(csp_sol):
+    return len(set(csp_sol.values()))
+
+if __name__ == '__main__':
+    # graphs = [rand_graph(10, 0.1), rand_graph(10, 0.2), rand_graph(10, 0.3)]
+    graphs = [rand_graph(30, 0.1), rand_graph(30, 0.2), rand_graph(30, 0.3),
+              rand_graph(30, 0.4), rand_graph(30, 0.5)]
+    for g in graphs:
+        p = rand_graph_teaming(g)
+        start_time = time.time()
+        res = backtracking_search(p)
+        elapsed_time = time.time() - start_time
+        if check_teams(g, res):
+            print ("Divided into " + str(team_count(res)) + " teams")
+            print ("Problem solved in " + str(elapsed_time) + " seconds")
+            print ("Number of assigned  variables: " + str(p.nassigns))
+            print ("Number of un-assigned  variables: " + str(len(p.variables) - p.nassigns) + "\n")
+        else:
+            print ("Result not valid")
+
+    # g = {0: [1, 2], 1: [0], 2: [0], 3: []}
+    # prob = rand_graph_teaming(g)
+    # print(backtracking_search(prob))
