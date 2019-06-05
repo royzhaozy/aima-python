@@ -42,7 +42,7 @@ if __name__ == '__main__':
         elapsed_time = time.time() - start_time
         if check_teams(g, res):
             print ("Edges count for random graph:\t\t" + str(edge_count(g)))
-            print ("Number of teams in result:\t\t\t" + str(team_count(res)))
+            print ("Number of teams in result:\t\t" + str(team_count(res)))
             print ("Seconds took solving the problem:\t" + str(elapsed_time))
             print ("Number of assigned  variables: \t\t" + str(p.nassigns))
             print ("Number of un-assigned  variables: \t" + str(len(p.variables) - p.nassigns) + "\n")
