@@ -9,9 +9,9 @@ from csp import min_conflicts
 
 if __name__ == '__main__':
     # graphs = [rand_graph(100, 0.1), rand_graph(100, 0.2), rand_graph(100, 0.3)]
-    graphs = [rand_graph(30, 0.1), rand_graph(30, 0.2), rand_graph(30, 0.3),
-              rand_graph(30, 0.4), rand_graph(30, 0.5), rand_graph(30, 0.6),
-              rand_graph(30, 0.7), rand_graph(30, 0.8), rand_graph(30, 0.9)]
+    graphs = [rand_graph(100, 0.1), rand_graph(100, 0.2), rand_graph(100, 0.3),
+              rand_graph(100, 0.4), rand_graph(100, 0.5), rand_graph(100, 0.6),
+              rand_graph(100, 0.7), rand_graph(100, 0.8), rand_graph(100, 0.9)]
     for g in graphs:
         p = rand_graph_teaming(g)
         start_time = time.time()
