@@ -1,0 +1,270 @@
+Edges count for random graph:		43
+Number of teams in result:		3
+Seconds took solving the problem:	0.0016875267028808594
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		79
+Number of teams in result:		6
+Seconds took solving the problem:	0.0008893013000488281
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		122
+Number of teams in result:		6
+Seconds took solving the problem:	0.0011339187622070312
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		181
+Number of teams in result:		7
+Seconds took solving the problem:	0.00139617919921875
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		222
+Number of teams in result:		9
+Seconds took solving the problem:	0.0017917156219482422
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		251
+Number of teams in result:		10
+Seconds took solving the problem:	0.002015829086303711
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		315
+Number of teams in result:		13
+Seconds took solving the problem:	0.002813577651977539
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		347
+Number of teams in result:		14
+Seconds took solving the problem:	0.0029480457305908203
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		384
+Number of teams in result:		17
+Seconds took solving the problem:	0.004029035568237305
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		44
+Number of teams in result:		3
+Seconds took solving the problem:	0.0018961429595947266
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		97
+Number of teams in result:		6
+Seconds took solving the problem:	0.0011076927185058594
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		119
+Number of teams in result:		6
+Seconds took solving the problem:	0.0011644363403320312
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		162
+Number of teams in result:		7
+Seconds took solving the problem:	0.0013761520385742188
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		232
+Number of teams in result:		8
+Seconds took solving the problem:	0.0018999576568603516
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		250
+Number of teams in result:		9
+Seconds took solving the problem:	0.002008676528930664
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		314
+Number of teams in result:		13
+Seconds took solving the problem:	0.0030477046966552734
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		352
+Number of teams in result:		14
+Seconds took solving the problem:	0.003332376480102539
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		391
+Number of teams in result:		20
+Seconds took solving the problem:	0.0048980712890625
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		39
+Number of teams in result:		4
+Seconds took solving the problem:	0.001977205276489258
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		85
+Number of teams in result:		5
+Seconds took solving the problem:	0.0008921623229980469
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		137
+Number of teams in result:		5
+Seconds took solving the problem:	0.0012242794036865234
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		168
+Number of teams in result:		8
+Seconds took solving the problem:	0.0016145706176757812
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		210
+Number of teams in result:		9
+Seconds took solving the problem:	0.00180816650390625
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		258
+Number of teams in result:		10
+Seconds took solving the problem:	0.0022118091583251953
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		313
+Number of teams in result:		13
+Seconds took solving the problem:	0.003021717071533203
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		337
+Number of teams in result:		15
+Seconds took solving the problem:	0.003339052200317383
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		388
+Number of teams in result:		18
+Seconds took solving the problem:	0.004481792449951172
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		50
+Number of teams in result:		4
+Seconds took solving the problem:	0.0016705989837646484
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		87
+Number of teams in result:		5
+Seconds took solving the problem:	0.0008647441864013672
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		120
+Number of teams in result:		6
+Seconds took solving the problem:	0.0011444091796875
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		163
+Number of teams in result:		7
+Seconds took solving the problem:	0.0011692047119140625
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		206
+Number of teams in result:		10
+Seconds took solving the problem:	0.0016803741455078125
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		251
+Number of teams in result:		9
+Seconds took solving the problem:	0.0019409656524658203
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		294
+Number of teams in result:		13
+Seconds took solving the problem:	0.0026378631591796875
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		356
+Number of teams in result:		14
+Seconds took solving the problem:	0.003119945526123047
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		394
+Number of teams in result:		16
+Seconds took solving the problem:	0.003925800323486328
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		49
+Number of teams in result:		4
+Seconds took solving the problem:	0.0017046928405761719
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		87
+Number of teams in result:		5
+Seconds took solving the problem:	0.0008301734924316406
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		136
+Number of teams in result:		6
+Seconds took solving the problem:	0.0011379718780517578
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		186
+Number of teams in result:		10
+Seconds took solving the problem:	0.0015273094177246094
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		209
+Number of teams in result:		8
+Seconds took solving the problem:	0.0016133785247802734
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		265
+Number of teams in result:		11
+Seconds took solving the problem:	0.0023353099822998047
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		313
+Number of teams in result:		14
+Seconds took solving the problem:	0.0027837753295898438
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		350
+Number of teams in result:		14
+Seconds took solving the problem:	0.0034101009368896484
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
+Edges count for random graph:		392
+Number of teams in result:		17
+Seconds took solving the problem:	0.004163980484008789
+Number of assigned  variables: 		30
+Number of un-assigned  variables: 	0
+
