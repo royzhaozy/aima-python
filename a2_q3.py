@@ -4,13 +4,11 @@ Summer 2019, Simon Fraser University
 Ziyi Zhao, 301244109
 """
 
-from utils import count, first
-import search
 import time
 
 from a2_q1 import *
 from a2_q2 import *
-from csp import CSP, different_values_constraint, backtracking_search
+from csp import CSP, different_values_constraint, backtracking_search, mrv, forward_checking
 
 # ______________________________________________________________________________
 # Erdos-Renyi random graph problem
@@ -31,7 +29,7 @@ def team_count(csp_sol):
     return len(set(csp_sol.values()))
 
 if __name__ == '__main__':
-    # graphs = [rand_graph(10, 0.1), rand_graph(10, 0.2), rand_graph(10, 0.3)]
+    # graphs = [rand_graph(10, 0.4), rand_graph(10, 0.5), rand_graph(10, 0.6)]
     graphs = [rand_graph(30, 0.1), rand_graph(30, 0.2), rand_graph(30, 0.3),
               rand_graph(30, 0.4), rand_graph(30, 0.5), rand_graph(30, 0.6),
               rand_graph(30, 0.7), rand_graph(30, 0.8), rand_graph(30, 0.9)]
@@ -41,10 +39,22 @@ if __name__ == '__main__':
         res = backtracking_search(p)
         elapsed_time = time.time() - start_time
         if check_teams(g, res):
+            print ("================== Back Tracking ==========================")
             print ("Edges count for random graph:\t\t" + str(edge_count(g)))
-            print ("Number of teams in result:\t\t" + str(team_count(res)))
+            print ("Number of teams in result:\t\t\t" + str(team_count(res)))
             print ("Seconds took solving the problem:\t" + str(elapsed_time))
             print ("Number of assigned  variables: \t\t" + str(p.nassigns))
-            print ("Number of un-assigned  variables: \t" + str(len(p.variables) - p.nassigns) + "\n")
+            print ("Number of un-assigned  variables: \t" + str(max(len(p.variables) - p.nassigns, 0)) + "\n")
         else:
             print ("Result not valid")
+        start_time = time.time()
+        res = backtracking_search(p, select_unassigned_variable=mrv, inference=forward_checking)
+        elapsed_time = time.time() - start_time
+        if check_teams(g, res):
+            print ("========== Back Tracking + forward checking ===============")
+            print ("Number of teams in result:\t\t\t" + str(team_count(res)))
+            print ("Seconds took solving the problem:\t" + str(elapsed_time))
+            print ("Number of assigned  variables: \t\t" + str(p.nassigns))
+            print ("Number of un-assigned  variables: \t" + str(max(len(p.variables) - p.nassigns, 0)) + "\n\n\n")
+        else:
+            print("Result not valid")
