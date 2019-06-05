@@ -41,7 +41,7 @@ if __name__ == '__main__':
         res = backtracking_search(p)
         elapsed_time = time.time() - start_time
         if check_teams(g, res):
-            print ("Random graph has " + str(edge_count(g) + " edges"))
+            print ("Random graph has " + str(edge_count(g)) + " edges")
             print ("Divided into " + str(team_count(res)) + " teams")
             print ("Problem solved in " + str(elapsed_time) + " seconds")
             print ("Number of assigned  variables: " + str(p.nassigns))
