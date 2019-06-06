@@ -1,0 +1,315 @@
+================== Min Conflicts ==========================
+Edges count for random graph:	485
+Number of teams in result:	65
+Seconds took solving the problem:	0.07457923889160156
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	998
+Number of teams in result:	68
+Seconds took solving the problem:	0.11983203887939453
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1492
+Number of teams in result:	72
+Seconds took solving the problem:	0.16261053085327148
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2001
+Number of teams in result:	74
+Seconds took solving the problem:	0.205733060836792
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2462
+Number of teams in result:	73
+Seconds took solving the problem:	0.22030353546142578
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2971
+Number of teams in result:	75
+Seconds took solving the problem:	0.2614915370941162
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3507
+Number of teams in result:	79
+Seconds took solving the problem:	0.3022632598876953
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3945
+Number of teams in result:	81
+Seconds took solving the problem:	0.3485875129699707
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	4469
+Number of teams in result:	89
+Seconds took solving the problem:	0.37778234481811523
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	529
+Number of teams in result:	68
+Seconds took solving the problem:	0.07959794998168945
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1005
+Number of teams in result:	68
+Seconds took solving the problem:	0.1231074333190918
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1481
+Number of teams in result:	69
+Seconds took solving the problem:	0.15403985977172852
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1968
+Number of teams in result:	78
+Seconds took solving the problem:	0.19225311279296875
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2448
+Number of teams in result:	70
+Seconds took solving the problem:	0.22824740409851074
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2975
+Number of teams in result:	76
+Seconds took solving the problem:	0.2725412845611572
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3438
+Number of teams in result:	78
+Seconds took solving the problem:	0.44649720191955566
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3882
+Number of teams in result:	85
+Seconds took solving the problem:	0.3298618793487549
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	4448
+Number of teams in result:	87
+Seconds took solving the problem:	0.37977051734924316
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	456
+Number of teams in result:	65
+Seconds took solving the problem:	0.07633423805236816
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1001
+Number of teams in result:	67
+Seconds took solving the problem:	0.12949681282043457
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1466
+Number of teams in result:	72
+Seconds took solving the problem:	0.17368245124816895
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1945
+Number of teams in result:	69
+Seconds took solving the problem:	0.2055344581604004
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2403
+Number of teams in result:	75
+Seconds took solving the problem:	0.24150490760803223
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3008
+Number of teams in result:	73
+Seconds took solving the problem:	0.2847862243652344
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3481
+Number of teams in result:	81
+Seconds took solving the problem:	0.3314971923828125
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3961
+Number of teams in result:	83
+Seconds took solving the problem:	0.3624875545501709
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	4483
+Number of teams in result:	90
+Seconds took solving the problem:	0.40881848335266113
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	519
+Number of teams in result:	61
+Seconds took solving the problem:	0.07832956314086914
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1005
+Number of teams in result:	67
+Seconds took solving the problem:	0.12192273139953613
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1485
+Number of teams in result:	67
+Seconds took solving the problem:	0.16373372077941895
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1978
+Number of teams in result:	72
+Seconds took solving the problem:	0.20756292343139648
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2492
+Number of teams in result:	69
+Seconds took solving the problem:	0.24999761581420898
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2914
+Number of teams in result:	75
+Seconds took solving the problem:	0.286327600479126
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3488
+Number of teams in result:	83
+Seconds took solving the problem:	0.3342881202697754
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3938
+Number of teams in result:	79
+Seconds took solving the problem:	0.3707468509674072
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	4440
+Number of teams in result:	87
+Seconds took solving the problem:	0.3927333354949951
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	442
+Number of teams in result:	63
+Seconds took solving the problem:	0.07156562805175781
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	972
+Number of teams in result:	68
+Seconds took solving the problem:	0.11766529083251953
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1458
+Number of teams in result:	71
+Seconds took solving the problem:	0.15865111351013184
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	1973
+Number of teams in result:	69
+Seconds took solving the problem:	0.2019658088684082
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	2470
+Number of teams in result:	70
+Seconds took solving the problem:	0.2444620132446289
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3006
+Number of teams in result:	79
+Seconds took solving the problem:	0.2892177104949951
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3487
+Number of teams in result:	79
+Seconds took solving the problem:	0.3308594226837158
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	3982
+Number of teams in result:	85
+Seconds took solving the problem:	0.37193918228149414
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
+================== Min Conflicts ==========================
+Edges count for random graph:	4495
+Number of teams in result:	87
+Seconds took solving the problem:	0.41518735885620117
+Number of assigned  variables: 	100
+Number of un-assigned  variables: 	0
+
