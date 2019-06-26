@@ -1,9 +1,7 @@
 from a2_q1 import *
-from a2_q2 import *
 from time import time
 from numpy import arange
 from os import system, remove
-from subprocess import call
 
 def make_ice_breaker_sat(graph, k):
     size = len(graph)
