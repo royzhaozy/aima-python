@@ -18,7 +18,8 @@ def Diagonals(N):
     for i in range(1, N * ( N - 1)):
         if (i % N) != 0:
             for j in range (i + N + 1, N**2 + 1, N + 1):
-                diag.append([-i, -j, 0])
+                diag.append(str(-i) + " " + str(-j) + " 0")
+                # diag.append([-i, -j, 0])
                 if (j % N) == 0:
                     break
 
@@ -26,7 +27,8 @@ def Diagonals(N):
     for i in range(1, N * ( N - 1) + 1):
         if (i % N) != 1:
             for j in range (i + N - 1, N**2 + 1, N - 1):
-                diag.append([-i, -j, 0])
+                diag.append(str(-i) + " " + str(-j) + " 0")
+                # diag.append([-i, -j, 0])
                 if (j % N) == 1:
                     break
 
@@ -37,15 +39,19 @@ def Rows(N):
 
     for i in range (1, N ** 2 + 1):
         if (i % N) == 1:
-            row.append([i])
-            for k in range (i + 1, i + N):
-                row[-1].append(k)
-            row[-1].append(0)
+            row.append(str(i))
+            # row.append([i])
+            for j in range (i + 1, i + N):
+                row[-1] += (" " + str(j))
+                # row[-1].append(j)
+            row[-1] += " 0"
+            # row[-1].append(0)
 
         if (i % N) != 0:
             j = i + 1
             while (j % N) != 1:
-                row.append([-i, -j, 0])
+                row.append(str(-i) + " " + str(-j) + " 0")
+                # row.append([-i, -j, 0])
                 j += 1
 
     return row
@@ -57,13 +63,17 @@ def Columns(N):
 
     while (True):
         if i <= N:
-            column.append([i])
+            column.append(str(i))
+            # column.append([i])
             for j in range (i + N, N ** 2 + 1, N):
-                column[-1].append(j)
-            column[-1].append(0)
+                column[-1] += (" " + str(j))
+                # column[-1].append(j)
+            column[-1] += " 0"
+            # column[-1].append(0)
 
         for j in range (i + N, N ** 2 + 1, N):
-            column.append([-i, -j, 0])
+            column.append(str(-i) + " " + str(-j) + " 0")
+            # column.append([-i, -j, 0])
 
         if i == (N * (N - 1)):
             break
@@ -76,13 +86,14 @@ def Columns(N):
 
     return column
 
-def NQueenSat(N):
+def make_queen_sat(N):
     if N < 2:
         raise ValueError("Only support N-Queen problem with size greater than 1")
     prob = Rows(N) + Columns(N) + Diagonals(N)
     size = len(prob)
     prob.insert(0, "c " + str(N) + "-queens problem")
     prob.insert(1, "p cnf " + str(N ** 2) + " " + str(size))
+    prob = "\n".join(prob)
     return prob
 
 def draw_queen_sat_sol(sol):
@@ -90,7 +101,7 @@ def draw_queen_sat_sol(sol):
 
     if solList[0] == 'UNSAT':
         print("no solution")
-        exit(0)
+        return
 
     content = list(map(int, solList[1: -2]))
 
@@ -105,11 +116,8 @@ def draw_queen_sat_sol(sol):
                 print('.', end=' ')
         print('')
 
-def writeListToFile(list, file):
-    return 0
-
 if __name__ == '__main__':
-    f = open("../Assignment 3/out.txt", "r")
-    sol = f.read()
+    N = 40
+    f = open("../Assignment 3/" + str(N) + "_Queen_test.txt", "+w")
+    f.write(make_queen_sat(N))
     f.close()
-    draw_queen_sat_sol(sol)
