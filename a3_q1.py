@@ -1,5 +1,6 @@
 from math import sqrt
 from re import split
+from subprocess import call
 
 def sameRoll(index1, index2, N):
     return int((index1 - 1) / N) == int((index2 - 1) / N)
@@ -117,7 +118,8 @@ def draw_queen_sat_sol(sol):
         print('')
 
 if __name__ == '__main__':
-    N = 40
+    N = 130
     f = open("../Assignment 3/" + str(N) + "_Queen_test.txt", "+w")
     f.write(make_queen_sat(N))
     f.close()
+    call(["minisat", "../Assignment 3/" + str(N) + "_Queen_test.txt", "../Assignment 3/" + str(N) + "_out.txt"])
