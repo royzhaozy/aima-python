@@ -1,6 +1,7 @@
 from a2_q1 import *
 from a2_q2 import *
 from time import time
+from numpy import arange
 from os import system, remove
 from subprocess import call
 
@@ -48,6 +49,10 @@ def find_min_teams(graph):
             return k, process_time
 
 if __name__ == '__main__':
-    graph = {0: [2], 1: [], 2: [0], 3: [], 4: []}
-    print(graph)
-    print(find_min_teams(graph))
+    size = 10
+    for i in arange (0.1, 1, 0.1):
+        print("\n" + "Probability is now " + str(i))
+        for j in range (10):
+            graph  = rand_graph(size, i)
+            print(str(j) + " " + str(find_min_teams(graph)))
+

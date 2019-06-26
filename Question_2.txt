@@ -1,0 +1,160 @@
+=============================== Puzzle 1 ================================
+4  *  5  
+1  6  2  
+3  7  8  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 2.8642942905426025 seconds
+Problem solved with default heuristic in 21 steps
+Problem solved with default heuristic with 4294 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.16515159606933594 seconds
+Problem solved with Manhattan heuristic in 21 steps
+Problem solved with Manhattan heuristic with 924 nodes removed
+
+
+=============================== Puzzle 2 ================================
+7  6  4  
+5  *  8  
+2  3  1  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 6.943310976028442 seconds
+Problem solved with default heuristic in 22 steps
+Problem solved with default heuristic with 6728 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.01454615592956543 seconds
+Problem solved with Manhattan heuristic in 22 steps
+Problem solved with Manhattan heuristic with 258 nodes removed
+
+
+=============================== Puzzle 3 ================================
+2  3  5  
+6  8  4  
+1  *  7  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 0.4609377384185791 seconds
+Problem solved with default heuristic in 19 steps
+Problem solved with default heuristic with 1670 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.022563457489013672 seconds
+Problem solved with Manhattan heuristic in 19 steps
+Problem solved with Manhattan heuristic with 315 nodes removed
+
+
+=============================== Puzzle 4 ================================
+1  7  *  
+2  5  6  
+4  3  8  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 5.572875022888184 seconds
+Problem solved with default heuristic in 22 steps
+Problem solved with default heuristic with 5972 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.13722920417785645 seconds
+Problem solved with Manhattan heuristic in 22 steps
+Problem solved with Manhattan heuristic with 869 nodes removed
+
+
+=============================== Puzzle 5 ================================
+3  *  5  
+6  8  1  
+2  4  7  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 64.73759508132935 seconds
+Problem solved with default heuristic in 25 steps
+Problem solved with default heuristic with 21133 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.35341382026672363 seconds
+Problem solved with Manhattan heuristic in 25 steps
+Problem solved with Manhattan heuristic with 1399 nodes removed
+
+
+=============================== Puzzle 6 ================================
+4  8  1  
+5  *  6  
+3  2  7  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 6.494292736053467 seconds
+Problem solved with default heuristic in 22 steps
+Problem solved with default heuristic with 6490 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.130706787109375 seconds
+Problem solved with Manhattan heuristic in 22 steps
+Problem solved with Manhattan heuristic with 829 nodes removed
+
+
+=============================== Puzzle 7 ================================
+4  1  8  
+*  2  5  
+3  7  6  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 0.46492481231689453 seconds
+Problem solved with default heuristic in 19 steps
+Problem solved with default heuristic with 1644 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.007266521453857422 seconds
+Problem solved with Manhattan heuristic in 19 steps
+Problem solved with Manhattan heuristic with 168 nodes removed
+
+
+=============================== Puzzle 8 ================================
+1  8  4  
+5  7  6  
+3  *  2  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 13.381589889526367 seconds
+Problem solved with default heuristic in 23 steps
+Problem solved with default heuristic with 9440 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.10578370094299316 seconds
+Problem solved with Manhattan heuristic in 23 steps
+Problem solved with Manhattan heuristic with 741 nodes removed
+
+
+=============================== Puzzle 9 ================================
+6  7  *  
+5  3  2  
+1  8  4  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 24.29174828529358 seconds
+Problem solved with default heuristic in 24 steps
+Problem solved with default heuristic with 12836 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.17131805419921875 seconds
+Problem solved with Manhattan heuristic in 24 steps
+Problem solved with Manhattan heuristic with 965 nodes removed
+
+
+=============================== Puzzle 10 ================================
+1  *  6  
+7  4  5  
+3  8  2  
+
+=========================== Default Heuristic ===========================
+Problem solved with default heuristic in 0.5356926918029785 seconds
+Problem solved with default heuristic in 19 steps
+Problem solved with default heuristic with 1782 nodes removed
+
+========================== Manhattan Heuristic ==========================
+Problem solved with Manhattan heuristic in 0.009128332138061523 seconds
+Problem solved with Manhattan heuristic in 19 steps
+Problem solved with Manhattan heuristic with 195 nodes removed
+
+

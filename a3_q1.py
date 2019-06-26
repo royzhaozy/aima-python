@@ -20,7 +20,6 @@ def Diagonals(N):
         if (i % N) != 0:
             for j in range (i + N + 1, N**2 + 1, N + 1):
                 diag.append(str(-i) + " " + str(-j) + " 0")
-                # diag.append([-i, -j, 0])
                 if (j % N) == 0:
                     break
 
@@ -29,7 +28,6 @@ def Diagonals(N):
         if (i % N) != 1:
             for j in range (i + N - 1, N**2 + 1, N - 1):
                 diag.append(str(-i) + " " + str(-j) + " 0")
-                # diag.append([-i, -j, 0])
                 if (j % N) == 1:
                     break
 
@@ -41,18 +39,14 @@ def Rows(N):
     for i in range (1, N ** 2 + 1):
         if (i % N) == 1:
             row.append(str(i))
-            # row.append([i])
             for j in range (i + 1, i + N):
                 row[-1] += (" " + str(j))
-                # row[-1].append(j)
             row[-1] += " 0"
-            # row[-1].append(0)
 
         if (i % N) != 0:
             j = i + 1
             while (j % N) != 1:
                 row.append(str(-i) + " " + str(-j) + " 0")
-                # row.append([-i, -j, 0])
                 j += 1
 
     return row
@@ -65,16 +59,12 @@ def Columns(N):
     while (True):
         if i <= N:
             column.append(str(i))
-            # column.append([i])
             for j in range (i + N, N ** 2 + 1, N):
                 column[-1] += (" " + str(j))
-                # column[-1].append(j)
             column[-1] += " 0"
-            # column[-1].append(0)
 
         for j in range (i + N, N ** 2 + 1, N):
             column.append(str(-i) + " " + str(-j) + " 0")
-            # column.append([-i, -j, 0])
 
         if i == (N * (N - 1)):
             break
