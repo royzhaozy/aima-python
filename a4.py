@@ -120,6 +120,6 @@ def play_a_new_game(difficulty = 20, board = [None]*9):
 
 
 if __name__ == '__main__':
-    board = [None ,0,None, None, 1, None, 0, 1, None]
-    play_a_new_game(20, board)
-    # play_a_new_game()
+    # board = [None ,0,None, None, 1, None, 0, 1, None]
+    # play_a_new_game(20, board)
+    play_a_new_game()
